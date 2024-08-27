@@ -1,5 +1,7 @@
 
-
+body{
+   margin: 0px;
+}
 .open-sans-normal {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -142,7 +144,7 @@ font-weight: bold;
  }
  footer input[type="text"], footer input[type="email"], footer textarea{
     height: 64px;
-    /* border-radius: 5px; */
+    border-radius: 5px;
     border: none;
     background-color: white;
     display: block;
@@ -151,3 +153,44 @@ font-weight: bold;
     margin-bottom: 24px;
  }
  
+
+ @media screen and (max-width: 576px) {
+   .skills-container, .resume-container, footer, .banner, nav {
+      flex-direction: column;
+   }
+   footer, .about, .skill{
+      padding: 10px;
+   }
+   .footer-column{
+      width: 100%;
+   }
+   footer input[type="text"], footer input[type="email"], footer textarea{
+      padding: 10px;
+      width: calc(100% - 20px);
+   } 
+   .banner{
+      margin: 0px;
+      justify-content: flex-start;
+      }
+   .about-items{
+      display: grid;
+      grid-template-columns: auto auto;
+       /* flex-direction: column; */
+      justify-content: space-evenly;
+      gap: 10px;
+   }
+   .about-item{
+      border: 2px solid #757575;
+      width: 120%;
+      padding: 5%;
+   }
+   .header{
+      background-image: none;
+   }
+   .banner{
+      margin: 10px;
+   }
+   nav{
+      margin: 0%;
+   }
+ }
